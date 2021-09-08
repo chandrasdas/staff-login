@@ -1,27 +1,22 @@
 {
   "name": "staff-login",
   "version": "1.0.0",
-  "description": "Demo login usint JWT",
+  "description": "A Demo Login project for staff using jwt in nodejs",
   "main": "app.js",
+  "devDependencies": {},
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chandrasdas/staff-login.git"
   },
-  "keywords": [
-    "login",
-    "JWT"
-  ],
+  "keywords": [],
   "author": "Chandra Sekhar Das <sekhar.mld@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/chandrasdas/staff-login/issues"
   },
-  "homepage": "https://github.com/chandrasdas/staff-login#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.12"
-  }
+  "homepage": "https://github.com/chandrasdas/staff-login#readme"
 }
