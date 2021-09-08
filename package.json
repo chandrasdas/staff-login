@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A Demo Login project for staff using jwt in nodejs",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/chandrasdas/staff-login/issues"
   },
-  "homepage": "https://github.com/chandrasdas/staff-login#readme"
+  "homepage": "https://github.com/chandrasdas/staff-login#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
