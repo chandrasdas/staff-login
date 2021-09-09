@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <%- include("../partials/header.ejs") %>
+<body>
+    <%- include("../partials/nav.ejs") %>
+    <style> 
+        table tr td {border: 1px solid black }
+        table { border-collapse: collapse}
+        td {padding: 2px 10px;}
+    </style>
+
+    <h2>Student Details:</h2>
+
+    
+    <% if (data.length > 0) { %>
+        <table >
+            <tr>
+                <td style="font-weight: bold">Student Name</td>
+                <td><%= data[0].name %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Class</td>
+                <td><%= data[0].class %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Father's Name</td>
+                <td><%= data[0].father %></td>
+            </tr>
+        </table>
+    <% } else { %>
+        <p>There is no student to display...</p>
+    <% } %>
+</body>
+</html>

@@ -1,24 +1,33 @@
 {
-  "name": "staff-login",
+  "name": "online-vidyamandir",
   "version": "1.0.0",
-  "description": "A Demo Login project for staff using jwt in nodejs",
+  "description": "A student management system for our instituion using Nodejs, Express and MySQL.",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chandrasdas/staff-login.git"
+    "url": "https://github.com/heroku/online-vidyamandir"
   },
-  "keywords": [],
-  "author": "Chandra Sekhar Das <sekhar.mld@gmail.com>",
+  "keywords": [
+    "Online",
+    "Vidyamandir"
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chandrasdas/staff-login/issues"
-  },
-  "homepage": "https://github.com/chandrasdas/staff-login#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "author": "Chandra Sekhar Das"
 }

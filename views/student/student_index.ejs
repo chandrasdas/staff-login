@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<%- include("../partials/header.ejs") %>
+<body>
+<%- include("../partials/nav.ejs") %>
+   
+<div class="search">
+    <form action="student/search" method="post">
+        <label for="searchText">Student Name or ID:</label>
+        <input type="text" id="searchText" name="searchText" minlength="3" required>
+        <button>Search</button>
+    </form>
+</div>
+<br>
+
+<br>
+<h1>Students' Summary</h1> <br>
+<% if (data.length> 0) { %>
+    <table>
+        <tr style="font-weight: bold;height: 2em;">
+            <td>CLASS</td>
+            <td>SEC</td>
+            <td>GEN</td>
+            <td>OBC-A</td>
+            <td>OBC-B</td>
+            <td>SC</td>
+            <td>ST</td>
+            <td>TOTAL</td>
+        </tr>
+        <% for(let i=0; i<data.length; i++) { %>
+            <% for(let j=0; j<data[i].length; j++) { %>
+                <% if(!data[i][j]) continue %>
+                <tr><% if( j === 0 ) {%>
+                    <td rowspan="<%= data[i].filter(Boolean).length %>"><%= data[i].CLASS %></td>
+                    <% } %>
+                    <td><%= data[i][j]['SECTION']   %></td>
+                    <td><%= data[i][j]['GENERAL']   %></td>
+                    <td><%= data[i][j]['OBC-A']     %></td>
+                    <td><%= data[i][j]['OBC-B']     %></td>
+                    <td><%= data[i][j]['SC']    %></td>
+                    <td><%= data[i][j]['ST']    %></td>
+                    <td><%= data[i][j]['TOTAL'] %></td>
+                </tr>
+            <% }} %>
+    </table>
+<% } else { %>
+    <p>There is no student to display...</p>
+<% } %>
+
+</body>
+
+</html>
